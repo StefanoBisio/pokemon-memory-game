@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Pokemon Memory Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Pokemon Memory Game is a simple memory game developed using React and the [PokeAPI](https://pokeapi.co/). The game was initially created by GPT-4 and has been improved with a human touch. This app serves as a tech demo of GPT-4's capabilities and was created within 48h of the AI's release.
 
-## Available Scripts
+The developer spent around 30 minutes debugging an issue with the array creation, where double IDs made the game unplayable. This demonstrates the effectiveness and usefulness of AI in the development process, and the necessity of human intervention to refine and optimize the result. This also hopefully demonstrates a open-mind in embracing new technologies, and how using them could potentially mean working smarter.
 
-In the project directory, you can run:
+Hosted on Netflify here: [Pokemon Memory Game](https://pokemon-memory-gpt4.netlify.app/).
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The game features a 4x5 grid of 20 tiles, each representing a unique Pokemon from the first generation. Each Pokemon has a pair, and the objective is to find all matching pairs within the given time limit of 120 seconds. The game starts once the user clicks a tile or presses the "Start the game" button.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Play
 
-### `npm test`
+1. Click on a tile to reveal the Pokemon hidden beneath.
+2. Click on another tile to find the matching Pokemon.
+3. If the second tile matches the first one, both tiles will remain revealed. Otherwise, they will be hidden again after a short delay.
+4. Continue finding and matching pairs until all pairs have been matched or the time runs out.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Implementation
 
-### `npm run build`
+The game makes use of React hooks to manage state and effects. It fetches data from the PokeAPI, selects 10 unique Pokemon randomly, then creates pairs of tiles for each. The tiles are then shuffled and displayed in a grid.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The game's timer starts once the user clicks a tile or the "Start the game" button. If the timer runs out before all pairs are matched, the game ends with a loss. If all pairs are matched before the timer runs out, the game ends with a win.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation and Running
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed;
+2. Clone the repository to your machine;
+3. Navigate to the project folder and run `npm install` to install all required dependencies;
+4. Run `npm start` to start the development server;
+5. Open your browser and go to `http://localhost:3000` to play the game.
